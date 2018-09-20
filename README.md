@@ -7,7 +7,7 @@ npm install anchors-away-js
 
 ### Usage
 ```js
-import layoutItems from 'anchors-away'
+import layoutItems from 'anchors-away-js'
 
 layoutItems({
   x: 0,
