@@ -1,26 +1,31 @@
 <template>
-  <div id="app">
+  <div id="app" class="flex">
     <div>
       <canvas ref="canvas" width="300" height="300"></canvas>
       <p>
         Anchor X:
-        <button @click="config.anchorX = 'left'">Left</button>
-        <button @click="config.anchorX = ''">Center</button>
-        <button @click="config.anchorX = 'right'">Right</button>
+        <button @click="settings.anchorX = 'left'">Left</button>
+        <button @click="settings.anchorX = ''">Center</button>
+        <button @click="settings.anchorX = 'right'">Right</button>
       </p>
       <p>
         Anchor Y:
-        <button @click="config.anchorY = 'top'">Top</button>
-        <button @click="config.anchorY = ''">Center</button>
-        <button @click="config.anchorY = 'bottom'">Bottom</button>
+        <button @click="settings.anchorY = 'top'">Top</button>
+        <button @click="settings.anchorY = ''">Center</button>
+        <button @click="settings.anchorY = 'bottom'">Bottom</button>
       </p>
       <p>
         Direction:
-        <button @click="config.direction = 'row'">Row</button>
-        <button @click="config.direction = 'column'">Column</button>
+        <button @click="settings.direction = 'row'">Row</button>
+        <button @click="settings.direction = 'column'">Column</button>
       </p>
     </div>
-    <pre>{{ layout }}</pre>
+    <div class="flex">
+      <pre>// Input
+{{ config }}</pre>
+      <pre>// Result
+{{ layout }}</pre>
+    </div>
   </div>
 </template>
 
@@ -39,7 +44,7 @@ export default {
         { width: 32, height: 32 },
         { width: 16, height: 16 }
       ],
-      config: {
+      settings: {
         anchorX: 'left',
         anchorY: 'top',
         direction: 'row'
@@ -50,19 +55,25 @@ export default {
   },
 
   computed: {
-    layout () {
-      const { config } = this
+    config () {
+      const { settings } = this
 
-      return layoutItems({
+      return {
         x: 0,
         y: 0,
         items: this.items,
         width: 300,
         height: 300,
         margin: 10,
-        anchors: [ config.anchorX, config.anchorY ].join(' '),
-        direction: config.direction
-      })
+        anchors: [ settings.anchorX, settings.anchorY ].join(' ').trim(),
+        direction: settings.direction
+      }
+    },
+
+    layout () {
+      const { config } = this
+
+      return layoutItems(config)
     }
   },
 
@@ -96,7 +107,7 @@ export default {
 </script>
 
 <style>
-#app {
+.flex {
   display: flex;
 }
 
