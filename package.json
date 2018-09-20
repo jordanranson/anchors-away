@@ -1,5 +1,5 @@
 {
-  "name": "anchors-away",
+  "name": "anchors-away-js",
   "version": "0.1.0",
   "private": false,
   "main": "lib/anchors-away.umd.js",
