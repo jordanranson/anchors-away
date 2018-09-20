@@ -3,6 +3,19 @@
   "version": "0.1.1",
   "private": false,
   "main": "lib/anchors-away.umd.js",
+  "license": "MIT",
+  "description": "A fluid positioning JavaScript framework for UI design.",
+  "keywords": "javascript positioning layout fluid flexbox responsive game ui ux canvas vue",
+  "homepage": "https://jordanranson.com/projects/anchors-away/",
+  "author": {
+    "name" : "Jordan Ranson",
+    "email" : "jordan@jordanranson.com",
+    "url" : "https://jordanranson.com/"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/jordanranson/anchors-away.git"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build-web": "vue-cli-service build",

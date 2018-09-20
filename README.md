@@ -1,5 +1,7 @@
 # Anchors Away
 
+A fluid positioning JavaScript framework for UI design.
+
 ## Installation
 ```
 npm install anchors-away-js
