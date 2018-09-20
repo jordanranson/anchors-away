@@ -90,8 +90,7 @@ export default {
   watch: {
     layout (layout) {
       this.draw(layout)
-    },
-
+    }
   }
 }
 </script>
