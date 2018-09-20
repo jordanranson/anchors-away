@@ -7,7 +7,7 @@ A fluid positioning JavaScript framework for UI design.
 npm install anchors-away-js
 ```
 
-### Usage
+## Usage
 ```js
 import layoutItems from 'anchors-away-js'
 
