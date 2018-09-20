@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import layoutItems from '@/anchors-away.js'
+import layoutItems from '@/lib/anchors-away.js'
 
 export default {
   name: 'app',
