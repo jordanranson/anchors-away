@@ -1,0 +1,6 @@
+lib/* linguist-vendored
+public/* linguist-vendored
+src/assets/* linguist-vendored
+src/components/* linguist-vendored
+src/App.vue linguist-vendored
+src/main.js linguist-vendored
